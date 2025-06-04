@@ -3,7 +3,11 @@ import { ref , defineProps} from 'vue'
 import jobData from '@/jobs.json'
 import JobListing from './JobListing.vue'
 defineProps({
-    limit: Number
+    limit: Number,
+    showButton: {
+        type: Boolean,
+        default: false
+    }
 })
 const jobs = ref(jobData.jobs)
 
@@ -27,4 +31,9 @@ const jobs = ref(jobData.jobs)
       </div>
     </div>
   </section>
+
+    <section v-if="showButton"class="m-auto max-w-lg my-10 px-6">
+      <a href="/jobs"
+        class="block bg-[#87CEEB] text-white text-center py-4 px-6 rounded-xl hover:bg-[#FFD700]">View All Jobs</a>
+    </section>
 </template>

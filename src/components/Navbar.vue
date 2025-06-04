@@ -10,7 +10,7 @@ import logo from '@/assets/img/logo.png'; // @ is shorthand for /src
           <!-- Logo -->
           <a class="flex flex-shrink-0 items-center mr-4" href="index.html">
             <img class="h-10 w-auto" :src="logo" alt="Vue Jobs" />
-            <span class="hidden md:block text-white text-2xl font-bold ml-2">Vue Jobs</span>
+            <span class="hidden md:block text-white text-2xl font-bold ml-2">Hirely | Vue Jobs</span>
           </a>
 
           <!-- Nav Links -->

@@ -1,35 +1,56 @@
 <script setup>
-import logo from '@/assets/img/logo.png'; // @ is shorthand for /src
+import { RouterLink, useRoute } from 'vue-router';
+import logo from '@/assets/img/logo.png';
+
+const isActiveLink = (routePath) => {
+  const route = useRoute();
+  return route.path === routePath;
+};
 </script>
 
 <template>
-  <nav class="border-b" style="background-color: #0A2463; border-color: #3E92CC;">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+  <nav class="bg-[#0A2463] border-b border-[#3E92CC] shadow-md">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between">
-        <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-          <!-- Logo -->
-          <a class="flex flex-shrink-0 items-center mr-4" href="index.html">
+        <!-- Left Side: Logo and Title -->
+        <div class="flex items-center space-x-4">
+          <RouterLink class="flex items-center" to="/">
             <img class="h-10 w-auto" :src="logo" alt="Vue Jobs" />
-            <span class="hidden md:block text-white text-2xl font-bold ml-2">Hirely | Vue Jobs</span>
-          </a>
+            <span class="hidden md:block text-white text-2xl font-semibold ml-2 tracking-wide">
+              Vue Jobs
+            </span>
+          </RouterLink>
+        </div>
 
-          <!-- Nav Links -->
-          <div class="md:ml-auto">
-            <div class="flex space-x-2">
-              <a
-                href="index.html"
-                class="text-white bg-[#3E92CC] hover:bg-[#FFD700] hover:text-[#0A2463] rounded-md px-3 py-2 transition-colors duration-200"
-              >Home</a>
-              <a
-                href="jobs.html"
-                class="text-white hover:bg-[#3E92CC] hover:text-white rounded-md px-3 py-2 transition-colors duration-200"
-              >Jobs</a>
-              <a
-                href="add-job.html"
-                class="text-white hover:bg-[#3E92CC] hover:text-white rounded-md px-3 py-2 transition-colors duration-200"
-              >Add Job</a>
-            </div>
-          </div>
+        <!-- Right Side: Nav Links -->
+        <div class="flex space-x-3">
+          <RouterLink
+            to="/"
+            :class="[
+              isActiveLink('/') ? 'bg-[#FFD700] text-[#0A2463]' : 'text-white hover:bg-[#3E92CC]',
+              'px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200'
+            ]"
+          >
+            Home
+          </RouterLink>
+          <RouterLink
+            to="/jobs"
+            :class="[
+              isActiveLink('/jobs') ? 'bg-[#FFD700] text-[#0A2463]' : 'text-white hover:bg-[#3E92CC]',
+              'px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200'
+            ]"
+          >
+            Jobs
+          </RouterLink>
+          <RouterLink
+            to="/jobs/add"
+            :class="[
+              isActiveLink('/jobs/add') ? 'bg-[#FFD700] text-[#0A2463]' : 'text-white hover:bg-[#3E92CC]',
+              'px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200'
+            ]"
+          >
+            Add Job
+          </RouterLink>
         </div>
       </div>
     </div>

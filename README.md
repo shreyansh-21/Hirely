@@ -1,4 +1,4 @@
-# Hirely 🧑‍💼
+# Hirely | Vue Job Portal 
 
 Hirely is a simple job portal built with Vue.js to practice CRUD operations. Users can create, read, update, and delete job listings in a clean and interactive interface. This project was created as part of learning Vue.js basics.
 

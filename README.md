@@ -1,33 +1,32 @@
-# vue-job-portal
+# Hirely 🧑‍💼
 
-This template should help get you started developing with Vue 3 in Vite.
+Hirely is a simple job portal built with Vue.js to practice CRUD operations. Users can create, read, update, and delete job listings in a clean and interactive interface. This project was created as part of learning Vue.js basics.
 
-## Recommended IDE Setup
+## ✨ Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- ✅ Create job listings
+- 📋 View all jobs
+- ✏️ Edit existing jobs
+- ❌ Delete job listings
 
-## Type Support for `.vue` Imports in TS
+## 📸 Screenshot
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+![Hirely Screenshot](./screenshot.png)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 📦 Getting Started
 
-## Project Setup
+Follow these steps to run the project locally:
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+# Clone the repository
+`git clone https://github.com/shreyansh-21/Hirely.git`
 
-```sh
-npm run dev
-```
+# Go into the project directory
+`cd hirely`
 
-### Type-Check, Compile and Minify for Production
+# Install dependencies
+`npm install`
 
-```sh
-npm run build
-```
+# Run the local server
+`npm run dev`

@@ -2,20 +2,19 @@
 
 Hirely is a simple job portal built with Vue.js to practice CRUD operations. Users can create, read, update, and delete job listings in a clean and interactive interface. This project was created as part of learning Vue.js basics.
 
-## ✨ Features
-
-- ✅ Create job listings
-- 📋 View all jobs
-- ✏️ Edit existing jobs
-- ❌ Delete job listings
 
 ## 📸 Screenshot
 
-![Hirely Screenshot](./screenshot.png)
+![Hirely Screenshot](./Screenshot.png)
 
+## ✨ Features
+
+- Create job listings
+- View all jobs
+- Edit existing jobs
+- Delete job listings
 
 ## 📦 Getting Started
-
 Follow these steps to run the project locally:
 
 
